@@ -1,0 +1,12 @@
+.DS_Store
+.classpath
+.project
+.settingsi
+.eclipse
+.idea
+target/
+bin/
+classes/
+lib/
+gwt-unitCache/
+WEB-INF/deploy/

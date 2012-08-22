@@ -1,0 +1,32 @@
+<head>
+  <title>livecoder</title>
+</head>
+
+<body>
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a class="brand" href="/">livecoder</a>
+            </div>
+        </div>
+    </div>
+    {{>main}}
+</body>
+
+<template name="main">
+    {{#if snippet_selected}}
+        <div class="container-fluid">
+            <p class="share">Share <a href="{{url}}">{{url}}</a> ... and happy Coding :)</p>
+            <div id="editor">
+                <textarea id="snippet">{{snippet.content}}</textarea>
+            </div>
+        </div>
+    {{else}}
+        <div class="container-fluid">
+            <div class="hero-unit welcome">
+                <p class="lead">Livecoder is a simple <a href="http://meteor.com/">Meteor-App</a> for Code-Sharing at Hacking-Nights, Coding-Sessions and so on.</p>
+                <button class="btn btn-primary btn-large" id="startSession">Start your Session</button>
+            </div>
+        </div>
+    {{/if}}
+</template>
