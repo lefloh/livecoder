@@ -1,6 +1,13 @@
 /* Livecoder Styles */
-body {
 
+body {
+    padding-top: 60px;
+}
+
+@media (max-width: 979px) {
+    body {
+        padding-top: 0px;
+    }
 }
 
 .welcome {
@@ -43,7 +50,7 @@ body {
 
 .share {
     text-align: center;
-    margin-top: 80px;
+    margin-top: 20px;
     font-size: 20px;
     font-weight: 200;
 }
