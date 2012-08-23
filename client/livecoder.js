@@ -26,6 +26,18 @@ Template.main.events = {
         if (event.target.value) {
             typingTimer = setTimeout(updateContent, doneTypingInterval, event.target.value);
         }
+    },
+    'keydown #snippet' : function(event) {
+        var keyCode = event.keyCode || event.which;
+        if (keyCode !== 9) {
+            return;
+        }
+        event.preventDefault();
+        var textarea = event.target;
+        var start = textarea.selectionStart;
+        var end = textarea.selectionEnd;
+        textarea.value = textarea.value.substring(0, start) + '\t' + textarea.value.substring(end);
+        textarea.selectionStart = textarea.selectionEnd = start + 1;
     }
 };
 
